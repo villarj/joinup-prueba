@@ -1,7 +1,8 @@
 from django.urls import path
-from views import UserProfileSelect
+from user_profile.api.views import ContactList
 
 urlpatterns = [
-    path('userprofile', UserProfileSelect.as_view(), name='companies'),
+    path('v1/contact', ContactList.as_view(), name='contacts'),
+    #path('management/contacts/<int:pk>', ContactDetail.as_view(), name='contacts-detail'),
 
 ]
